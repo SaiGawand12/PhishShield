@@ -1,6 +1,6 @@
 Flask
 requests
-scikit-learn
+scikit-learn==1.4.2
 pandas
 numpy
 beautifulsoup4
