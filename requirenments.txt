@@ -10,3 +10,4 @@ transformers
 whois
 tldextract
 joblib
+web: gunicorn app:app
