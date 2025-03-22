@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishShield: AI-Powered Website Safety Checker</title>
+    <style>
+        /* Light Theme UI */
+        body {
+            font-family: "Arial", sans-serif;
+            background: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            border: 1px solid #ddd;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 28px;
+        }
+        h2 {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 14px;
+            color: #666;
+        }
+        input[type="text"] {
+            padding: 12px;
+            width: 85%;
+            margin-top: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background: #fff;
+            color: #333;
+            font-size: 16px;
+            outline: none;
+        }
+        input[type="text"]:focus {
+            border-color: #3498db;
+        }
+        button {
+            padding: 12px 20px;
+            margin-top: 15px;
+            background: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background: #2980b9;
+            transform: scale(1.05);
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+        .safe {
+            background-color: #4CAF50;
+            box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+        }
+        .phishing {
+            background-color: #D32F2F;
+            box-shadow: 0 0 15px rgba(211, 47, 47, 0.5);
+        }
+        .info-box {
+            text-align: left;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 5px solid #3498db;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+        .info-box h3 {
+            color: #3498db;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .buttons button {
+            margin: 5px;
+            background-color: #FFA000;
+        }
+        .copyright {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            input[type="text"] {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 PhishShield</h1>
+        <h2>AI-Powered Website Safety Checker</h2>
+        <p>Analyze a website for phishing threats and security risks.</p>
+
+        <form method="POST">
+            <input type="text" name="url" placeholder="Enter website URL (e.g., https://example.com)" required>
+            <button type="submit">🔍 Analyze</button>
+        </form>
+
+        {% if result %}
+            <div class="result {% if result == 'Legitimate' %}safe{% elif result == 'Phishing' %}phishing{% else %}error{% endif %}">
+                🔎 {{ result }}
+            </div>
+            <div class="buttons">
+                <button onclick="window.open('{{ whois_link }}', '_blank')">Whois Lookup</button>
+                <button onclick="window.open('{{ technical_details_link }}', '_blank')">VirusTotal Analysis</button>
+            </div>
+        {% endif %}
+
+        <div class="info-box">
+            <h3>🚨 Understanding Phishing Attacks</h3>
+            <p>Phishing is a cyber-attack where malicious actors create fake websites that mimic legitimate ones to steal sensitive data such as passwords and credit card details.</p>
+
+            <h3>🤖 How PhishShield Works</h3>
+            <p>PhishShield uses AI-driven machine learning models to analyze various features of a website, such as:</p>
+            <ul>
+                <li>🔹 Domain reputation & age</li>
+                <li>🔹 SSL certificate validation</li>
+                <li>🔹 URL structure analysis</li>
+                <li>🔹 IP address verification</li>
+                <li>🔹 Page content similarity detection</li>
+            </ul>
+
+            <h3>🛡️ Best Practices for Safe Browsing</h3>
+            <p>✔ Always check for **HTTPS** before entering sensitive data.</p>
+            <p>✔ Avoid clicking on **unexpected email links**.</p>
+            <p>✔ Verify the sender before entering credentials.</p>
+            <p>✔ Use a **password manager** to avoid phishing traps.</p>
+        </div>
+    </div>
+    
+    <div class="copyright">
+        &copy; 2025 PhishShield | Developed by SAI GAWAND
+    </div>
+</body>
+</html>
