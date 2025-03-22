@@ -1,0 +1,13 @@
+Flask
+requests
+scikit-learn
+pandas
+numpy
+beautifulsoup4
+tensorflow
+torch
+transformers
+whois
+tldextract
+joblib
+web: gunicorn app:app
