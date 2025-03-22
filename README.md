@@ -21,7 +21,7 @@ PhishShield is trained using the following datasets:
 ## Installation
 Clone the repository and install dependencies:
 ```bash
-git clone https://github.com/yourusername/PhishShield.git
+git clone https://github.com/SaiGawand12/PhishShield.git
 ```
 ```bash
 cd PhishShield
