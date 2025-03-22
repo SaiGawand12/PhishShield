@@ -81,7 +81,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## ⭐ Acknowledgments
-- PhishTank and GregaVrbancic's Phishing Dataset
+- PhishTank and  Majestic's Phishing Dataset
 - Flask & Machine Learning Community
 
 ---
