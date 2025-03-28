@@ -11,3 +11,4 @@ whois
 tldextract
 joblib
 gunicorn
+Python==3.12.3
